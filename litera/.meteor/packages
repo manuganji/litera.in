@@ -4,9 +4,12 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-autopublish
-insecure
 preserve-inputs
 bootstrap-3
+<<<<<<< HEAD
+iron-router
+bootstrap3-wysihtml5
+=======
 accounts-password
 accounts-ui-bootstrap-3
+>>>>>>> 9a492809a13b7a91342d30e49e0adc7d45f645ab
