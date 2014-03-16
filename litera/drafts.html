@@ -3,3 +3,21 @@
     <li><a href="#">Another action</a></li>
     <li><a href="#">Something else here</a></li>
 </template>
+
+<template name="editor">
+    <form action="#" method="post" accept-charset="utf-8">
+        {{#if post}}
+        <input class="form-control" type="text" name="title" id="title" value="{{post.title}}" placeholder="Post title"/>
+        <textarea class="form-control" name="post" id="post" placeholder="Post Content">{{post.content}}</textarea>
+        {{else}}
+        <input class="form-control" type="text" name="title" id="title" value="" placeholder="Post title"/>
+        <hr />
+        <textarea class="form-control" name="post" id="post" placeholder="Post Content"></textarea>
+        {{/if}}
+        <hr />
+        <div>
+            <button class="btn btn-default" type="button" title="Save"><span class="glyphicon glyphicon-hdd"></span> Save</button>
+            <button class="btn btn-success pull-right" type="button"><span class="glyphicon glyphicon-bullhorn"></span> Publish</button>
+        </div>
+    </form>
+</template>
