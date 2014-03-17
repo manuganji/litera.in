@@ -7,12 +7,9 @@
 <template name="editor">
     <form action="#" method="post" accept-charset="utf-8">
         {{#if post}}
-        <input class="form-control" type="text" name="title" id="title" value="{{post.title}}" placeholder="Post title"/>
-        <textarea class="form-control" name="content" id="content" placeholder="Post Content">{{post.content}}</textarea>
+        <textarea class="form-control" name="content" id="content" rows=15 placeholder="Post Content">{{post.content}}</textarea>
         {{else}}
-        <input class="form-control" type="text" name="title" id="title" value="" placeholder="Post title"/>
-        <hr />
-        <textarea class="form-control" name="content" id="content" placeholder="Post Content"></textarea>
+        <textarea class="form-control" name="content" id="content" rows=15 placeholder="Post Content"></textarea>
         {{/if}}
         <hr />
         <div>

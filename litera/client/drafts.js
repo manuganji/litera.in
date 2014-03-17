@@ -12,12 +12,10 @@ Template.editor.rendered = function () {
 
 Template.editor.events({
     'click #publish': function (event, template) {
-        var title = template.find("#title").value;
         var content = template.find("#content").value;
-        if (title.length && content.length) {
+        if (content.length) {
             Posts.insert({
                 'owner': this.userId,
-                'title': title,
                 'content': content,
             });
         }

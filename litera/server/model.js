@@ -6,7 +6,7 @@ Posts.allow({
         if (userId !== post.owner) { // can only update posts that the user owns
             return false;
         };
-        allowedFields = ['owner', 'title', 'content'];// cannot update the owner of a post 
+        allowedFields = ['owner', 'content'];// cannot update the owner of a post 
 
         if (_.contains(fields, allowedFields)) {            
             return false;
