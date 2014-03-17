@@ -1,0 +1,12 @@
+<template name="postsList">
+    {{#if numPosts }}
+        <div class="list-group">
+            {{#each posts }}
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading">{{this.title}}</h4>
+                  <p class="list-group-item-text">{{this.content}}</p>
+                </a>
+            {{/each}}
+        </div> 
+    {{/if}}
+</template>

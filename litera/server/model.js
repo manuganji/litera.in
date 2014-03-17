@@ -1,6 +1,6 @@
 Posts.allow({
     insert: function (userId, post) {
-        return false;
+        return true;
     },
     update: function (userId, post, fields, modifier) {
         if (userId !== post.owner) { // can only update posts that the user owns

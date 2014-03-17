@@ -9,3 +9,18 @@ Template.editor.rendered = function () {
     "color": false //Button to change color of font  
   });
 }
+
+Template.editor.events({
+    'click #publish': function (event, template) {
+        var title = template.find("#title").value;
+        var content = template.find("#content").value;
+        if (title.length && content.length) {
+            Posts.insert({
+                'owner': this.userId,
+                'title': title,
+                'content': content,
+            });
+        }
+    }
+});
+                                
